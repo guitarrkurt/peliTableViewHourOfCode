@@ -31,6 +31,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return cell
     }
+    
+     internal func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let alert = UIAlertView()
+        alert.title = "😎 Selecciono:"
+        alert.message = array[indexPath.row]
+        alert.addButtonWithTitle("Ok 😀")
+        alert.show()
+    }
 
 }
 
